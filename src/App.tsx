@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react'
+
+import DependencyContainer from './dependency/dependencyContainer'
+import { DependencyContextProvider } from './dependency/dependencyContext'
+import Modaller from './view/modaller/Modaller'
+import Router from './view/router/Router'
+import Notifier from './view/notifier/Notifier'
+
+const dependencyContainer = new DependencyContainer()
 
 function App() {
+  useEffect(() => {
+
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <DependencyContextProvider value={dependencyContainer}>
+      <Notifier />
+      <Router />
+      <Modaller />
+    </DependencyContextProvider>
+  )
 }
 
-export default App;
+export default App
