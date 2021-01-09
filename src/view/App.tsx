@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import Modaller from './modaller/Modaller'
 import Router from './router/Router'
 import Notifier from './notifier/Notifier'
-import useDependency from '../dependency/useDependency'
+import useDependency from './hooks/useDependency'
 
 function App() {
   const { } = useDependency()

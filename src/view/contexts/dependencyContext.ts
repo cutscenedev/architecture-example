@@ -1,6 +1,6 @@
 import { createContext } from 'react'
 
-import DependencyContainer from './dependencyContainer'
+import DependencyContainer from '../../dependency/dependencyContainer'
 
 const dependencyContext = createContext<null | DependencyContainer>(null)
 

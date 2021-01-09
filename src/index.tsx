@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import App from './view/App'
 import DependencyContainer from './dependency/dependencyContainer'
-import { DependencyContextProvider } from './dependency/dependencyContext'
+import { DependencyContextProvider } from './view/contexts/dependencyContext'
 
 const dependencyContainer = new DependencyContainer()
 

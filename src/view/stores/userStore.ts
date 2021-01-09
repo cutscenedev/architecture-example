@@ -1,6 +1,6 @@
 import { makeAutoObservable } from 'mobx'
 
-import UserModel from '../models/userModel'
+import UserModel from '../../models/userModel'
 
 class UserStore extends UserModel {
   constructor(id: string, name: string) {
