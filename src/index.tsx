@@ -1,19 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import App from './view/App'
-import DependencyContainer from './dependency/dependencyContainer'
-import { DependencyContextProvider } from './view/contexts/dependencyContext'
+import App from './App'
 
-const dependencyContainer = new DependencyContainer()
-
-// pre initial-render init
+// good place for: add polyfills, configure libs, dev environment setup
 
 ReactDOM.render(
   <React.StrictMode>
-    <DependencyContextProvider value={dependencyContainer}>
-      <App />
-    </DependencyContextProvider>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 )
